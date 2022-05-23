@@ -97,6 +97,21 @@ def substring_slice(path2file_1,path2file_2):
         x += 1
     return str1
 
+# 8
+import json
+import re
+def decode_ch(sting_of_elements):
+    with open('G:\\Университет\\Практикум по программированию\\2 семестр\\periodic_table.json', 'r', encoding='utf-8') as fh:
+        periodic_table = json.load(fh)
+    new_li = re.sub(r'([A-Z])', r' \1', sting_of_elements).split()
+    str0 = ''
+    x = 0
+    while x < len(new_li):
+        a = periodic_table.get(new_li[x])
+        str0 = str0 + a
+        x += 1
+    return str0
+
 # 9
 class Student():
     default_grades = [3,4,5]
@@ -129,8 +144,3 @@ class Student():
 
     def __str__(self):
         return self.fullname
-
-
-
-
-#8

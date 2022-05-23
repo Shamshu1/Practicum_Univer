@@ -101,7 +101,7 @@ def substring_slice(path2file_1,path2file_2):
 import json
 import re
 def decode_ch(sting_of_elements):
-    with open('G:\\Университет\\Практикум по программированию\\2 семестр\\periodic_table.json', 'r', encoding='utf-8') as fh:
+    with open('periodic_table.json', 'r', encoding='utf-8') as fh:
         periodic_table = json.load(fh)
     new_li = re.sub(r'([A-Z])', r' \1', sting_of_elements).split()
     str0 = ''
@@ -144,3 +144,8 @@ class Student():
 
     def __str__(self):
         return self.fullname
+
+# 10
+class MyError(Exception):
+    def __init__(self, msg = 'Error'):
+        self.message = msg

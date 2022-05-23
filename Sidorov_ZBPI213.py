@@ -77,7 +77,7 @@ def calculate(path2file):
         x += 1
     return str1
 
-#7
+# 7
 def substring_slice(path2file_1,path2file_2):   
     f1 = open(path2file_1)
     f2 = open(path2file_2)
@@ -100,9 +100,10 @@ def substring_slice(path2file_1,path2file_2):
 # 8
 import json
 import re
+
 def decode_ch(sting_of_elements):
-    with open('periodic_table.json', 'r', encoding='utf-8') as fh:
-        periodic_table = json.load(fh)
+    with open('periodic_table.json', 'r', encoding='utf-8') as file:
+        periodic_table = json.load(file)
     new_li = re.sub(r'([A-Z])', r' \1', sting_of_elements).split()
     str0 = ''
     x = 0
